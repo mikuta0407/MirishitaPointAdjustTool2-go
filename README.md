@@ -1,6 +1,6 @@
-https://github.com/mhrb-minase/MirishitaPointAdjustTool2 に触発されて、ミリシタイベのポイント調整ツールをGolangで作ろうとしています。まだ動きません。
-
 mltd-pat: **M**illion **L**ive **T**heater **D**ays **P**oint **A**djust **T**ool
+
+https://github.com/mhrb-minase/MirishitaPointAdjustTool2 に触発されて、ミリシタイベのポイント調整ツールをGolangで作ろうとしています。まだ動きません。
 
 ## 使い方(予定)
 - `go install github.com/mikuta0407/mltd-pat@latest`
