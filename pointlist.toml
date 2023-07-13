@@ -1,0 +1,44 @@
+[anniversary]
+    [[anniversary.live]]
+    name = "recommend 2M 10.5x"
+    point = 441
+    [[anniversary.live]]
+    name = "recommend 4M 10.5x"
+    point = 620
+    [[anniversary.live]]
+    name = "recommend 6M 10.5x"
+    point = 809
+    [[anniversary.live]]
+    name = "recommend MM 10.5x"
+    point = 1071
+    [[anniversary.live]]
+    name = "recommend solo 2M 10.5x"
+    point = 441
+    [[anniversary.live]]
+    name = "recommend solo 2M+ 10.5x"
+    point = 777
+
+    [[anniversary.live]]
+    name = "normal 2M 10.5x"
+    point = 368
+    [[anniversary.live]]
+    name = "normal 4M 10.5x"
+    point = 515
+    [[anniversary.live]]
+    name = "normal 6M 10.5x"
+    point = 672
+    [[anniversary.live]]
+    name = "normal MM 10.5x"
+    point = 893
+
+    [[anniversary.live]]
+    name = "event 1x"
+    point = 537
+    [[anniversary.live]]
+    name = "event 2x"
+    point = 1074
+    [[anniversary.live]]
+    name = "event 4x"
+    point = 2148
+
+    
