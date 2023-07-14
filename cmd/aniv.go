@@ -15,14 +15,9 @@ import (
 
 // anivCmd represents the aniv command
 var anivCmd = &cobra.Command{
-	Use:   "aniv",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "aniv <current points> <target points>",
+	Short: "calculator for anniversary event",
+	Long:  `Caluculator for anniversary event`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("aniv called")
 		pointlist, err := config.ParseToml("pointlist.toml")
