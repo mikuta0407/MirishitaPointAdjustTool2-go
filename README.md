@@ -2,11 +2,12 @@ mltd-pat: **M**illion **L**ive **T**heater **D**ays **P**oint **A**djust **T**oo
 
 https://github.com/mhrb-minase/MirishitaPointAdjustTool2 に触発されて、ミリシタイベのポイント調整ツールをGolangで作ろうとしています。とりあえず動きます。(元プロジェクト内のイベントアイテム数に応じた計算は未実装です)
 
-## 使い方(予定)
-- `go install github.com/mikuta0407/mltd-pat@latest`
-- 周年イベなら `mltd-pat aniv <現在ポイント> <目標ポイント>`
-- pointlist.tomlにライブ定義を書けます。
-- ライブ総数を最小化したときの各ライブの必要回数が出力されます
+## 使い方
+- 周年イベント用(現在これしか無い)
+  - `go install github.com/mikuta0407/mltd-pat@latest`
+  - 周年イベなら `mltd-pat aniv <現在ポイント> <目標ポイント>`
+  - pointlist.tomlにライブ定義を書けます。
+  - ライブ総数を最小化したときの各ライブの必要回数が出力されます
 
 ## どこまでで出来ている?
 - tomlからの定義パース
