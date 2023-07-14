@@ -2,16 +2,16 @@ package calc
 
 import (
 	"fmt"
-	"math"
 	"os"
 
 	"github.com/mikuta0407/mltd-pat/config"
 )
 
 var pointLimit = 10000000
+var eventItemLimit = 1000000000
 
 func Main(pointlist config.PointList, mode string, currentPoint int, targetPoint int) error {
-	fmt.Println(pointlist)
+	//fmt.Println(pointlist)
 
 	if currentPoint < 0 || targetPoint < 0 || targetPoint > pointLimit {
 		return fmt.Errorf("input value between 0 and %d", pointLimit)
@@ -34,25 +34,13 @@ func anivCalc(pointlist config.PointList, currentPoint int, targetPoint int) err
 
 	minLiveCount := make([]int, remain+1, remain+1)
 	for i := 1; i <= remain; i++ {
-		minLiveCount[i] = math.MaxInt64
-	}
-
-	for i := 1; i <= remain; i++ {
-		for j := 1; j <= len(pointlist.ANNIVERSARY.LIVE); j++ {
-			live := pointlist.ANNIVERSARY.LIVE[j]
-			if i+live.POINT > remain {
-				continue
-			}
-
-			if j >= pointlist.ANNIVERSARY.LIVE[i].POINT {
-				//				minLiveCount[j] = min
-			}
-		}
+		minLiveCount[i] = 1073741823
+		//=math.MaxInt64
 	}
 
 	lastLiveIndex := make([]int, remain+1, remain+1)
-	for i := 1; i <= remain; i++ {
-		minLiveCount[i] = -1
+	for i := 0; i <= remain; i++ {
+		lastLiveIndex[i] = -1
 	}
 
 	for i := 0; i <= remain; i++ {
@@ -85,7 +73,10 @@ func anivCalc(pointlist config.PointList, currentPoint int, targetPoint int) err
 
 	fmt.Println("live count is below.")
 	for i := 0; i < len(pointlist.ANNIVERSARY.LIVE); i++ {
-		fmt.Println(pointlist.ANNIVERSARY.LIVE[i].NAME, liveCount[i])
+		if liveCount[i] != 0 {
+			fmt.Println(pointlist.ANNIVERSARY.LIVE[i].NAME, liveCount[i])
+		}
+
 	}
 
 	return nil
